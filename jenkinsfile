@@ -5,7 +5,7 @@
           stage("build & sonarqube") {
             agent any
             steps {
-              withSonarQubeEnv('Sonar_Token') {
+              withSonarQubeEnv('Sonarqube') {
                 sh 'mvn clean package sonar:sonar'
               }
             }
